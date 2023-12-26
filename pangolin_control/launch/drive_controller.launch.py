@@ -10,7 +10,11 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     return LaunchDescription([
-
+        Node(
+            package='pangolin_control',
+            executable='pangolin_imu',
+            name='pangolin_imu',
+            output='screen'),
         Node(
             package='pangolin_control',
             executable='pangolin_control',
